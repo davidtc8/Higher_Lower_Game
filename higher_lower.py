@@ -27,7 +27,7 @@ while game_is_on:
     #loop count
     loop += 1
     if loop > 0:
-        upperbound -= 1
+        upperbound -= 2
 
     def random_number():
         """This function will return a random number between 0 and 49"""
@@ -41,10 +41,12 @@ while game_is_on:
     #In here I'm calling the specific number in the list for the player A
     random_no1 = random_number()
     playerA = (data_list[random_no1])
+    removeplayerA = data_list.remove(playerA)
 
     #In here I'm calling the specific number in the list for the player B
     random_no2 = random_number()
     playerB = (data_list[random_no2])
+    removeplayerB = data_list.remove(playerB)
 
     #Player A function
     def A():
@@ -105,8 +107,8 @@ while game_is_on:
         continue
 
     #remove the celebrities we have already seen
-    data_list.remove(playerA)
-    data_list.remove(playerB)
+    #data_list.remove(playerA)
+    #data_list.remove(playerB)
     #wait 3 seconds
     time.sleep(3)
     #clear the console
